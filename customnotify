@@ -19,6 +19,7 @@ Achievements.Get = function(data)
         local frame = Plr.PlayerGui.MainUI.AchievementsHolder.Achievement:Clone()
 
         frame.Name = "LiveAchievement"
+        frame.Frame.TextLabel.Text = data.CustomTile
         frame.Frame.Details.Title.Text = data.Title
         frame.Frame.Details.Desc.Text = data.Desc
         frame.Frame.Details.Reason.Text = data.Reason
@@ -41,7 +42,5 @@ Achievements.Get = function(data)
         frame:Destroy()
     end)
 end
-
--- Scripts
 
 return Achievements
